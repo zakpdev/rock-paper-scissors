@@ -7,23 +7,13 @@ function getComputerChoice(){
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-/*
-Write a function that plays a single round of Rock Paper Scissors. 
+//playRound function
 
-The function should take two parameters - the playerSelection and computerSelection - 
-
-and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
-
-Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
-*/
-
-//playRoung function
 //accepts playerSelection and computerSelection and plays a single round of Rock, Paper, Scissors returning the results in a string
 
 function playRound(playerSelection, computerSelection) {
   
   playerSelection = playerSelection.toLowerCase(); //satisfies requirement that the parameter be case-insensitive
-  
   computerSelection = computerSelection.toLowerCase();
   
   if (playerSelection == 'rock') {
@@ -60,4 +50,36 @@ function playRound(playerSelection, computerSelection) {
     }
   }
   
+}
+
+//game function
+
+function game () {
+  
+  let playerScore = 0;
+  let computerScore = 0;
+  let result;
+
+  //main game loop
+  for (let i = 1; i <= 5 ; i++) {
+    result = playRound(prompt('Rock, Paper or Scissors?'), getComputerChoice())
+    console.log(result);
+    if (result.includes('Win')) {
+      playerScore++;
+    }
+    else if (result.includes('Lose')) {
+      computerScore++;
+    }  
+  }
+  
+  //show user game results
+  if (playerScore == computerScore) {
+    console.log('The score is ' + playerScore + ' to ' + computerScore + '. Tie Game!');
+  }
+  else if (playerScore > computerScore) {
+    console.log('The score is ' + playerScore + ' to ' + computerScore + '. You Win!');
+  }
+  else {
+    console.log('The score is ' + playerScore + ' to ' + computerScore + '. You Lose!');
+  }
 }
