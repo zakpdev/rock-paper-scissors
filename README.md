@@ -6,16 +6,16 @@ https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
 Concepts explored include:
 
-Variables
-Numbers
-Strings
-Boolean
-Loops
-Comparisons
-String Methods
-Functions
-Debugging using Dev Tools
-Problem-Solving
+Variables, 
+Numbers, 
+Strings, 
+Boolean, 
+Loops, 
+Comparisons,  
+String Methods, 
+Functions, 
+Debugging using Dev Tools, 
+Problem-Solving, 
 Pseudocode
 
 
