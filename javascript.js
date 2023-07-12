@@ -8,7 +8,6 @@ function getComputerChoice(){
 }
 
 //playRound function
-
 //accepts playerSelection and computerSelection and plays a single round of Rock, Paper, Scissors returning the results in a string
 
 function playRound(playerSelection, computerSelection) {
@@ -52,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
   
 }
 
-//game function
+/* //game function
 
 function game () {
   
@@ -82,4 +81,4 @@ function game () {
   else {
     console.log('The score is ' + playerScore + ' to ' + computerScore + '. You Lose!');
   }
-}
+} */
