@@ -51,6 +51,25 @@ function playRound(playerSelection, computerSelection) {
   
 }
 
+//retrieve the buttons
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
+
+//play a game with playerSelection tied to the corresponding button
+rock.addEventListener('click', function(){
+  console.log(playRound(rock.textContent, getComputerChoice()));
+});
+
+paper.addEventListener('click', function(){
+  console.log(playRound(paper.textContent, getComputerChoice()));
+});
+
+scissors.addEventListener('click', function(){
+  console.log(playRound(scissors.textContent, getComputerChoice()));
+});
+
 /* //game function
 
 function game () {
