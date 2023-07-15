@@ -2,6 +2,7 @@
 let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
+let result;
 
 //getComputerChoice function
 //randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
@@ -62,29 +63,58 @@ const scissors = document.getElementById("scissors");
 const test = document.getElementById("test");
 
 
-//play a game with playerSelection tied to the corresponding button
+//play a game with playerSelection tied to the corresponding button + update scores
 rock.addEventListener('click', function(){
-  console.log(playRound(rock.textContent, getComputerChoice()));
+  result = playRound(rock.textContent, getComputerChoice());
+  //console.log(playRound(rock.textContent, getComputerChoice()));
+  if (result.includes('Win')) {
+    playerScore++;
+  }
+  else if (result.includes('Lose')) {
+    computerScore++;
+  }  
   roundsPlayed++;
+  console.log(result);
   console.log(roundsPlayed);
+  console.log(playerScore);
+  console.log(computerScore);
 });
 
 paper.addEventListener('click', function(){
-  console.log(playRound(paper.textContent, getComputerChoice()));
+  result = playRound(paper.textContent, getComputerChoice());
+  if (result.includes('Win')){
+    playerScore++;
+  }
+  else if (result.includes('Lose')){
+    computerScore++;
+  }
   roundsPlayed++;
+  console.log(result);
   console.log(roundsPlayed);
+  console.log(playerScore);
+  console.log(computerScore);
 });
 
 scissors.addEventListener('click', function(){
-  console.log(playRound(scissors.textContent, getComputerChoice()));
+  result = playRound(scissors.textContent, getComputerChoice());
+  //console.log(playRound(scissors.textContent, getComputerChoice()));
+  if (result.includes('Win')){
+    playerScore++;
+  }
+  else if (result.includes('Lose')){
+    computerScore++;
+  }
   roundsPlayed++;
+  console.log(result);
   console.log(roundsPlayed);
+  console.log(playerScore);
+  console.log(computerScore);
 });
 
-test.addEventListener('click', function(){
+/* test.addEventListener('click', function(){
   roundsPlayed++;
   console.log(roundsPlayed);
-});
+}); */
 
 /* //game function
 
