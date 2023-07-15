@@ -1,4 +1,8 @@
 
+let playerScore = 0;
+let computerScore = 0;
+let roundsPlayed = 0;
+
 //getComputerChoice function
 //randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
 
@@ -55,19 +59,31 @@ function playRound(playerSelection, computerSelection) {
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+const test = document.getElementById("test");
 
 
 //play a game with playerSelection tied to the corresponding button
 rock.addEventListener('click', function(){
   console.log(playRound(rock.textContent, getComputerChoice()));
+  roundsPlayed++;
+  console.log(roundsPlayed);
 });
 
 paper.addEventListener('click', function(){
   console.log(playRound(paper.textContent, getComputerChoice()));
+  roundsPlayed++;
+  console.log(roundsPlayed);
 });
 
 scissors.addEventListener('click', function(){
   console.log(playRound(scissors.textContent, getComputerChoice()));
+  roundsPlayed++;
+  console.log(roundsPlayed);
+});
+
+test.addEventListener('click', function(){
+  roundsPlayed++;
+  console.log(roundsPlayed);
 });
 
 /* //game function
