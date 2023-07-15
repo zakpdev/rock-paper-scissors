@@ -56,7 +56,16 @@ function playRound(playerSelection, computerSelection) {
   
 }
 
-//retrieve the buttons
+//target score containers
+const player = document.getElementById("playerScore");
+const computer = document.getElementById("computerScore");
+const gameResult = document.getElementById("results");
+
+//initialize scores
+player.innerHTML = playerScore;
+computer.innerHTML = computerScore;
+
+//target the buttons
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
