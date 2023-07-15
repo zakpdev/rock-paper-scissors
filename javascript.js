@@ -6,7 +6,6 @@ let result;
 
 //getComputerChoice function
 //randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
-
 function getComputerChoice(){
   let choices = ['Rock', 'Paper', 'Scissors'];
   return choices[Math.floor(Math.random() * choices.length)];
@@ -14,7 +13,6 @@ function getComputerChoice(){
 
 //playRound function
 //accepts playerSelection and computerSelection and plays a single round of Rock, Paper, Scissors returning the results in a string
-
 function playRound(playerSelection, computerSelection) {
   
   playerSelection = playerSelection.toLowerCase(); //satisfies requirement that the parameter be case-insensitive
@@ -75,64 +73,57 @@ const test = document.getElementById("test");
 //play a game with playerSelection tied to the corresponding button + update scores
 rock.addEventListener('click', function(){
   result = playRound(rock.textContent, getComputerChoice());
-  //console.log(playRound(rock.textContent, getComputerChoice()));
+  
   if (result.includes('Win')) {
     playerScore++;
   }
   else if (result.includes('Lose')) {
     computerScore++;
   }  
+  
   roundsPlayed++;
+  
   gameResult.innerHTML = result;
-  //console.log(result);
-  console.log(roundsPlayed);
   player.innerHTML = playerScore;
-  //console.log(playerScore);
   computer.innerHTML = computerScore;
-  //console.log(computerScore);
 });
 
 paper.addEventListener('click', function(){
   result = playRound(paper.textContent, getComputerChoice());
+  
   if (result.includes('Win')){
     playerScore++;
   }
   else if (result.includes('Lose')){
     computerScore++;
   }
+  
   roundsPlayed++;
+  
   gameResult.innerHTML = result;
-  //console.log(result);
-  console.log(roundsPlayed);
   player.innerHTML = playerScore;
-  //console.log(playerScore);
   computer.innerHTML = computerScore;
-  //console.log(computerScore);
 });
 
 scissors.addEventListener('click', function(){
   result = playRound(scissors.textContent, getComputerChoice());
-  //console.log(playRound(scissors.textContent, getComputerChoice()));
+  
   if (result.includes('Win')){
     playerScore++;
   }
   else if (result.includes('Lose')){
     computerScore++;
   }
+  
   roundsPlayed++;
+  
   gameResult.innerHTML = result;
-  //console.log(result);
-  console.log(roundsPlayed);
   player.innerHTML = playerScore;
-  //console.log(playerScore);
   computer.innerHTML = computerScore;
-  //console.log(computerScore);
 });
 
-/* test.addEventListener('click', function(){
-  roundsPlayed++;
-  console.log(roundsPlayed);
-}); */
+
+
 
 /* //game function
 
