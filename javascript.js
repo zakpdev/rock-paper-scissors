@@ -83,10 +83,13 @@ rock.addEventListener('click', function(){
     computerScore++;
   }  
   roundsPlayed++;
-  console.log(result);
+  gameResult.innerHTML = result;
+  //console.log(result);
   console.log(roundsPlayed);
-  console.log(playerScore);
-  console.log(computerScore);
+  player.innerHTML = playerScore;
+  //console.log(playerScore);
+  computer.innerHTML = computerScore;
+  //console.log(computerScore);
 });
 
 paper.addEventListener('click', function(){
@@ -98,10 +101,13 @@ paper.addEventListener('click', function(){
     computerScore++;
   }
   roundsPlayed++;
-  console.log(result);
+  gameResult.innerHTML = result;
+  //console.log(result);
   console.log(roundsPlayed);
-  console.log(playerScore);
-  console.log(computerScore);
+  player.innerHTML = playerScore;
+  //console.log(playerScore);
+  computer.innerHTML = computerScore;
+  //console.log(computerScore);
 });
 
 scissors.addEventListener('click', function(){
@@ -114,10 +120,13 @@ scissors.addEventListener('click', function(){
     computerScore++;
   }
   roundsPlayed++;
-  console.log(result);
+  gameResult.innerHTML = result;
+  //console.log(result);
   console.log(roundsPlayed);
-  console.log(playerScore);
-  console.log(computerScore);
+  player.innerHTML = playerScore;
+  //console.log(playerScore);
+  computer.innerHTML = computerScore;
+  //console.log(computerScore);
 });
 
 /* test.addEventListener('click', function(){
