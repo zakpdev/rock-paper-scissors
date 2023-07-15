@@ -1,4 +1,4 @@
-
+//declarations
 let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
@@ -86,6 +86,13 @@ rock.addEventListener('click', function(){
   gameResult.innerHTML = result;
   player.innerHTML = playerScore;
   computer.innerHTML = computerScore;
+
+  if(roundsPlayed == 5){
+    rock.remove();
+    paper.remove();
+    scissors.remove();
+  };
+
 });
 
 paper.addEventListener('click', function(){
@@ -103,6 +110,12 @@ paper.addEventListener('click', function(){
   gameResult.innerHTML = result;
   player.innerHTML = playerScore;
   computer.innerHTML = computerScore;
+
+  if(roundsPlayed == 5){
+    rock.remove();
+    paper.remove();
+    scissors.remove();
+  };
 });
 
 scissors.addEventListener('click', function(){
@@ -120,6 +133,12 @@ scissors.addEventListener('click', function(){
   gameResult.innerHTML = result;
   player.innerHTML = playerScore;
   computer.innerHTML = computerScore;
+
+  if(roundsPlayed == 5){
+    rock.remove();
+    paper.remove();
+    scissors.remove();
+  };
 });
 
 
