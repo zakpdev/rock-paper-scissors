@@ -4,6 +4,13 @@ let computerScore = 0;
 let roundsPlayed = 0;
 let result;
 
+//target body
+const body = document.querySelector("body");
+
+//create a new button to restart game
+const playAgain = document.createElement('button');
+playAgain.textContent = "Play Again";
+
 //getComputerChoice function
 //randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
 function getComputerChoice(){
@@ -91,6 +98,7 @@ rock.addEventListener('click', function(){
     rock.remove();
     paper.remove();
     scissors.remove();
+    body.append(playAgain);
   };
 
 });
@@ -115,6 +123,7 @@ paper.addEventListener('click', function(){
     rock.remove();
     paper.remove();
     scissors.remove();
+    body.append(playAgain);
   };
 });
 
@@ -138,9 +147,14 @@ scissors.addEventListener('click', function(){
     rock.remove();
     paper.remove();
     scissors.remove();
+    body.append(playAgain);
   };
 });
 
+//reload page when playAgain button clicked
+playAgain.addEventListener('click', function(){
+  window.location.reload();
+});
 
 
 
