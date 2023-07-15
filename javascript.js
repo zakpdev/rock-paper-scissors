@@ -64,6 +64,7 @@ function playRound(playerSelection, computerSelection) {
 //target score containers
 const player = document.getElementById("playerScore");
 const computer = document.getElementById("computerScore");
+const resultHeading = document.getElementById("resultHeading");
 const gameResult = document.getElementById("results");
 
 //initialize scores
@@ -77,7 +78,7 @@ const scissors = document.getElementById("scissors");
 const test = document.getElementById("test");
 
 
-//play a game with playerSelection tied to the corresponding button + update scores
+//play a game with playerSelection tied to the corresponding button + update scores/results
 rock.addEventListener('click', function(){
   result = playRound(rock.textContent, getComputerChoice());
   
@@ -99,6 +100,16 @@ rock.addEventListener('click', function(){
     paper.remove();
     scissors.remove();
     body.append(playAgain);
+    resultHeading.innerHTML = "Final Result";
+    if (playerScore == computerScore) {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. Tie Game!';
+    }
+    else if (playerScore > computerScore) {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. You Win!';
+    }
+    else {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. You Lose!';
+    }
   };
 
 });
@@ -124,6 +135,16 @@ paper.addEventListener('click', function(){
     paper.remove();
     scissors.remove();
     body.append(playAgain);
+    resultHeading.innerHTML = "Final Result";
+    if (playerScore == computerScore) {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. Tie Game!';
+    }
+    else if (playerScore > computerScore) {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. You Win!';
+    }
+    else {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. You Lose!';
+    }
   };
 });
 
@@ -148,6 +169,16 @@ scissors.addEventListener('click', function(){
     paper.remove();
     scissors.remove();
     body.append(playAgain);
+    resultHeading.innerHTML = "Final Result";
+    if (playerScore == computerScore) {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. Tie Game!';
+    }
+    else if (playerScore > computerScore) {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. You Win!';
+    }
+    else {
+      gameResult.innerHTML = 'The score is ' + playerScore + ' to ' + computerScore + '. You Lose!';
+    }
   };
 });
 
@@ -155,37 +186,3 @@ scissors.addEventListener('click', function(){
 playAgain.addEventListener('click', function(){
   window.location.reload();
 });
-
-
-
-/* //game function
-
-function game () {
-  
-  let playerScore = 0;
-  let computerScore = 0;
-  let result;
-
-  //main game loop
-  for (let i = 1; i <= 5 ; i++) {
-    result = playRound(prompt('Rock, Paper or Scissors?'), getComputerChoice())
-    console.log(result);
-    if (result.includes('Win')) {
-      playerScore++;
-    }
-    else if (result.includes('Lose')) {
-      computerScore++;
-    }  
-  }
-  
-  //show user game results
-  if (playerScore == computerScore) {
-    console.log('The score is ' + playerScore + ' to ' + computerScore + '. Tie Game!');
-  }
-  else if (playerScore > computerScore) {
-    console.log('The score is ' + playerScore + ' to ' + computerScore + '. You Win!');
-  }
-  else {
-    console.log('The score is ' + playerScore + ' to ' + computerScore + '. You Lose!');
-  }
-} */
